@@ -35,6 +35,7 @@ export const VirtualizedList = () => {
 		return (
 			<div key={key} style={style}>
 				<p>{`Post ${index + 1}`}</p>
+				{/* <p>{item.title}</p> */}
 			</div>
 		);
 	};

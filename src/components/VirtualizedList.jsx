@@ -33,8 +33,8 @@ export const VirtualizedList = () => {
 	const rowRenderer = ({ index, key, style }) => {
 		const item = items[index];
 		return (
-			<div key={key} style={style} className="row">
-				<h3>{item.title}</h3>
+			<div key={key} style={style}>
+				<p>{`Post ${index + 1}`}</p>
 			</div>
 		);
 	};
@@ -54,7 +54,6 @@ export const VirtualizedList = () => {
 						rowHeight={30}
 						rowRenderer={rowRenderer}
 						onRowsRendered={({ stopIndex }) => {
-							console.log(stopIndex);
 							if (stopIndex + 1 === items.length) {
 								loadMoreRows();
 							}
